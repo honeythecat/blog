@@ -1,0 +1,10 @@
+
+
+<h1><%= @post.title %></h1>
+
+<h4><%= @post.body %></h4>
+
+<p><%= link_to "RETURN TO POSTS!!", posts_path %></p>
+<p><%= link_to "DELETE POST!!", post_path(@post),
+                                :data =>{ :confirm => "REALLY?!",
+                                  :method => 'delete' } %></p>
