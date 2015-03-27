@@ -27,9 +27,9 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    if @post.update(params[:post])
+    if @post.update(post_params)
       flash[:notice] = "POST SUCCESSFULLY UPDATED!!!"
-      redirect_to posts_path
+      redirect_to post_path
     else
       render :edit
     end
