@@ -8,7 +8,7 @@
 <h1>Comments:</h1>
 <p><%= link_to "Add a comment!", new_post_comment_path(@post) %></p>
 <% if @post.comments.any? %>
-  <h4>Here are the tasks for this list:</h4>
+  <h4>Here are the COMMENTS for this POST!!:</h4>
   <ul>
     <% @post.comments.each do |comment| %>
     <li>
