@@ -15,7 +15,8 @@ To use:
 Or if it works you can try it at Heroku here:
   https://warm-taiga-9911.herokuapp.com/
 
-Known bugs as of 3/26/15: Crappy design. Lack of test specs. Logging-in exists purely for shits and giggles.
+Known bugs as of 3/26/15:
+  Crappy design. Lack of test specs. Logging-in exists purely for shits and giggles.
 
 Motivation:
   To practice writing a Ruby on Rails app with authentication and proper testing, then deploy to heroku.
@@ -23,4 +24,4 @@ Motivation:
 License:
   Heather Anderson. MIT License. Copyright 2015. Created by Heather Anderson. Email: heather@thisisnotanorg.org.
 
-Note to self: If you have time you should write a note to yourself and maybe proofread this.
+Note to self: Well...you did it. You have made a working blog that is possibly the most poorly designed blog in history!! That's quite an accomplishment. However you didn't test a goddamn thing, at least not successfully, but time is an ever decreasing thing and you can't really rely on the clock. Personally you have overcome many obstacles this week: you learned how to use your new computer, you understand the basics of a ruby app, you know how to vaguely test things, and you talked to a lot of people about a lot of things. Now go and do something somewhat productive.
