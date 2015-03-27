@@ -5,6 +5,28 @@
 
 <h4><%= @post.body %></h4>
 
+<h1>Comments:</h1>
+<p><%= link_to "Add a comment!", new_post_comment_path(@post) %></p>
+<% if @post.comments.any? %>
+  <h4>Here are the tasks for this list:</h4>
+  <ul>
+    <% @post.comments.each do |comment| %>
+    <li>
+      <p>Commenter: <%= comment.commenter %> | <%= comment.created_at.to_s(:long) %></p>
+        <%= comment.comment %>
+        <%= link_to "Edit", edit_post_comment_path(@post, comment) %> |
+        <%= link_to "Delete", post_comment_path(@post, comment),
+                              :data => {:confirm => "REALLY?",
+                                :method => "delete"} %>
+    </li>
+    <% end %>
+  </ul>
+
+<% else %>
+
+  <h5>There are no comments yet!</h5>
+<% end %>
+
 <p><%= link_to "RETURN TO POSTS!!", posts_path %></p>
 <p><%= link_to "EDIT POST!!", edit_post_path(@post) %></p>
 <p><%= link_to "DELETE POST!!", post_path(@post),
