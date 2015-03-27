@@ -1,28 +1,25 @@
-== README
+Total Anarchy! A Blog!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Ruby on Rails app that will allow you to login and post on a simple, user-unfriendly, blog. You can also comment on blog posts. It also allows for self-doubt; you can edit and delete posts and comments. And because it is so user unfriendly...You can edit and delete any other user's posts!!!!! By using this app you can gauge how bad of a person you are and when people complain that you're an asshole, you can delete their hurtful comments and post using their name. Sweet huh? As an added bonus, unless you give identify yourself in your post, no one will know it's you! Total anarchy!
 
-Things you may want to cover:
+Requires:
+  Ruby version 2.2.1
+  Active Record
+  Postgres
 
-* Ruby version
+To use:
+  Clone this git repository
+  Create a new database and run rake db:schema:load
+  Start a rails server and go to localhost:3000
 
-* System dependencies
+Or if it works you can try it at Heroku here:
 
-* Configuration
+Known bugs as of 3/26/15: Crappy design. Lack of test specs. Logging-in exists purely for shits and giggles.
 
-* Database creation
+Motivation:
+  To practice writing a Ruby on Rails app with authentication and proper testing, then deploy to heroku.
 
-* Database initialization
+License:
+  Heather Anderson. MIT License. Copyright 2015. Created by Heather Anderson. Email: heather@thisisnotanorg.org.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Note to self: If you have time you should write a note to yourself and maybe proofread this.
