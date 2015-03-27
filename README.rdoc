@@ -13,6 +13,7 @@ To use:
   Start a rails server and go to localhost:3000
 
 Or if it works you can try it at Heroku here:
+  https://warm-taiga-9911.herokuapp.com/
 
 Known bugs as of 3/26/15: Crappy design. Lack of test specs. Logging-in exists purely for shits and giggles.
 
