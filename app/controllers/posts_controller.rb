@@ -18,9 +18,12 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.save
       flash[:notice] = "POST SUCCESSFULLY SAVED!!!"
-      redirect_to posts_path(@post)
+      respond_to do |format|
+    format.html { redirect_to posts_path }
+    format.js
+      end
     else
-      render :new
+      render :edit
     end
   end
 

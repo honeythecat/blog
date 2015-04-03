@@ -1,24 +1,32 @@
-
-
 <h1><%= @post.title %></h1>
-<h6><%= @post.created_at.to_s(:long) %></h6>
+<h6><%= @post.created_at.to_s(:long) %> |
+  <%= link_to "EDIT POST!!", edit_post_path(@post), id: "edit_post", remote: :true %> |
+  <%= link_to "DELETE POST!!", post_path(@post),
+                                :data =>{ :confirm => "REALLY?!",
+                                :method => 'delete' } %>
+</h6>
 
-<h4><%= @post.body %></h4>
+<div class="container">
+  <%= @post.body %>
+</div>
 
+<hr>
 
-<p><%= link_to "Add a comment!", new_post_comment_path(@post), id: "new_comment", remote: :true %></p>
+<h6><%= link_to "Add a comment!", new_post_comment_path(@post), id: "new_comment", remote: :true %></h6>
+<h4>COMMENTS for this POST!!</h4>
+
 <% if @post.comments.any? %>
-  <h4>Here are the COMMENTS for this POST!!:</h4>
   <ul>
     <% @post.comments.each do |comment| %>
+    <hr>
     <li>
-      <p>Commenter: <%= comment.commenter %> | <%= comment.created_at.to_s(:long) %></p>
-        <%= comment.comment %>
+      <p><%= comment.comment %><p>
+      <h6>Commenter: <%= comment.commenter %> | <%= comment.created_at.to_s(:long) %> |
         <%= link_to "Edit", edit_post_comment_path(@post, comment), id: "edit_comment", remote: :true %> |
         <%= link_to "Delete", post_comment_path(@post, comment),
                               :data => {:confirm => "REALLY?",
-                                :method => "delete"} %>
-      <hr>
+                              :method => "delete"} %>
+      </h6>
     </li>
     <% end %>
   </ul>
@@ -27,9 +35,3 @@
 
   <h5>There are no comments yet!</h5>
 <% end %>
-
-<p><%= link_to "RETURN TO POSTS!!", posts_path %></p>
-<p><%= link_to "EDIT POST!!", edit_post_path(@post) %></p>
-<p><%= link_to "DELETE POST!!", post_path(@post),
-                                :data =>{ :confirm => "REALLY?!",
-                                  :method => 'delete' } %></p>

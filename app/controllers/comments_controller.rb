@@ -14,7 +14,9 @@ class CommentsController < ApplicationController
         respond_to do |format|
       format.html { redirect_to post_path(@comment.post) }
       format.js
-      end
+        end
+    else
+      render :edit
     end
   end
 
@@ -27,8 +29,11 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = Comment.find(params[:id])
     if @comment.update(comment_params)
-      flash[:notice] = "Comment Successfully Added!"
-      redirect_to post_path(@comment.post)
+      flash[:notice] = "Comment Successfully Updated!"
+        respond_to do |format|
+      format.html { redirect_to post_path(@comment.post) }
+      format.js
+      end
     else
       render :edit
     end
