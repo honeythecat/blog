@@ -22,7 +22,7 @@
     <li>
       <p><%= comment.comment %><p>
       <h6>Commenter: <%= comment.commenter %> | <%= comment.created_at.to_s(:long) %> |
-        <%= link_to "Edit", edit_post_comment_path(@post, comment), id: "edit_comment", remote: :true %> |
+        <%= link_to "Edit Comment", edit_post_comment_path(@post, comment), id: "edit_comment", remote: :true %> |
         <%= link_to "Delete", post_comment_path(@post, comment),
                               :data => {:confirm => "REALLY?",
                               :method => "delete"} %>
